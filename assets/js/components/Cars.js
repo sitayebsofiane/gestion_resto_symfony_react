@@ -2,8 +2,7 @@ import React, { Component, Fragment } from 'react';
 import Car from './Car';
 
 class Cars extends Component{
-    // constructor(props){
-    //     super(props);
+   
      state={
         voitures:[
         {name:'Ford',color:'red',year:2001},
@@ -12,8 +11,8 @@ class Cars extends Component{
         ],
         titre:'catalogue'
      }
-    //}
-    addTenYears(){
+  
+    addTenYears=()=>{
       const updatedState = this.state.voitures.map((param)=> param.year+=10);
        this.setState({
         updatedState
@@ -26,7 +25,7 @@ class Cars extends Component{
       return (
         <>
         <h1>{this.capitalizeFirstLetter(this.state.titre)}</h1>
-        <button onClick={()=>this.addTenYears()}>+ 10 ans</button>
+        <button onClick={this.addTenYears}>+ 10 ans</button>
         <table className="table">
         <thead>
         <tr>
