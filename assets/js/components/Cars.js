@@ -4,16 +4,16 @@ import Car from './Car';
 class Cars extends Component{
    
      state={
-        voitures:[
-        {name:'Ford',color:'red',year:2001},
-        {name:'mercedes',color:'black',year:2002},
-        {name:'peugeot',color:'green',year:2003}
+        produits:[
+        {name:'Ford',description:'red',prix:2001},
+        {name:'mercedes',description:'black',prix:2002},
+        {name:'peugeot',description:'green',prix:2003}
         ],
         titre:'catalogue'
      }
   
     addTenYears=()=>{
-      const updatedState = this.state.voitures.map((param)=> param.year+=10);
+      const updatedState = this.state.produits.map((param)=> param.prix+=10);
        this.setState({
         updatedState
        })
@@ -29,18 +29,18 @@ class Cars extends Component{
         <table className="table">
         <thead>
         <tr>
-          <th>Marque</th>
-          <th>Couleur</th>
-          <th>Annee</th>
+          <th>nom</th>
+          <th>description</th>
+          <th>prix</th>
         </tr>
         </thead>
         <tbody>
         
              {
-               this.state.voitures.map((voiture,index)=>{
+               this.state.produits.map((produit,index)=>{
                  return(
                    <Fragment key={index}>
-                    <Car nom = {voiture.name} color={voiture.color}  year={voiture.year}/>
+                    <Car nom = {produit.name} color={produit.description}  year={produit.prix}/>
                    </Fragment> 
                  )
                })
