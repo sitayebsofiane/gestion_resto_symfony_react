@@ -12,15 +12,4 @@ class App extends Component {
         )
     }
 }
-class Button extends Component {
-    render() {
-        return (
-            <>
-               <button type="button" className="btn btn-primary ">click</button>
-            </>
-        )
-    }
-}
-ReactDOM.render(<Button />, document.getElementById("kamel"));
-
 ReactDOM.render(<App />, document.getElementById("root"));
