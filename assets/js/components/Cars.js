@@ -5,15 +5,15 @@ class Cars extends Component{
    
      state={
         produits:[
-        {name:'Ford',description:'red',prix:2001},
-        {name:'mercedes',description:'black',prix:2002},
-        {name:'peugeot',description:'green',prix:2003}
+        {name:'chese burger',description:'red',prix:2},
+        {name:'mergueze',description:'black',prix:2},
+        {name:'kebab',description:'green',prix:2.1}
         ],
         titre:'catalogue'
      }
   
     addTenYears=()=>{
-      const updatedState = this.state.produits.map((param)=> param.prix+=10);
+      const updatedState = this.state.produits.map((param)=> param.prix*=1.02);
        this.setState({
         updatedState
        })
@@ -25,7 +25,7 @@ class Cars extends Component{
       return (
         <>
         <h1>{this.capitalizeFirstLetter(this.state.titre)}</h1>
-        <button onClick={this.addTenYears}>+ 10 ans</button>
+        <button onClick={this.addTenYears}>augmenter </button>
         <table className="table">
         <thead>
         <tr>
@@ -40,7 +40,7 @@ class Cars extends Component{
                this.state.produits.map((produit,index)=>{
                  return(
                    <Fragment key={index}>
-                    <Car nom = {produit.name} color={produit.description}  year={produit.prix}/>
+                    <Car nom = {produit.name} description={produit.description}  prix={produit.prix}/>
                    </Fragment> 
                  )
                })
