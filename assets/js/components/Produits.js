@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react';
-import Car from './Produit';
+import Produit from './Produit';
 
 class Produits extends Component{
    
@@ -40,7 +40,7 @@ class Produits extends Component{
                this.state.produits.map((produit,index)=>{
                  return(
                    <Fragment key={index}>
-                    <Car nom = {produit.name} description={produit.description}  prix={produit.prix}/>
+                    <Produit nom = {produit.name} description={produit.description}  prix={produit.prix}/>
                    </Fragment> 
                  )
                })
