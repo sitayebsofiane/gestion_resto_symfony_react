@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Car = ({nom,description,prix})=>{
+const Produit = ({nom,description,prix})=>{
         
         if(nom)
         return (
@@ -16,4 +16,4 @@ const Car = ({nom,description,prix})=>{
          )
     
 }
-export default Car;
+export default Produit;

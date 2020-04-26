@@ -2,7 +2,7 @@
 import '../css/app.css';
 import ReactDOM from 'react-dom';
 import React, { Component } from 'react';
-import Cars from './components/Cars';
+import Cars from './components/Produits';
 class App extends Component {
     render() {
         return (
@@ -12,4 +12,4 @@ class App extends Component {
         )
     }
 }
-ReactDOM.render(<App />, document.getElementById("root"));
+ReactDOM.render(<App />, document.getElementById("accueil"));

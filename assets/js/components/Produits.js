@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react';
-import Car from './Car';
+import Car from './Produit';
 
-class Cars extends Component{
+class Produits extends Component{
    
      state={
         produits:[
@@ -52,4 +52,4 @@ class Cars extends Component{
     );
     }
   }
-export default Cars;
+export default Produits;
