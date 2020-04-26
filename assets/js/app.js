@@ -2,12 +2,12 @@
 import '../css/app.css';
 import ReactDOM from 'react-dom';
 import React, { Component } from 'react';
-import Cars from './components/Produits';
+import Produits from './components/Produits';
 class App extends Component {
     render() {
         return (
             <>
-                <Cars />
+                <Produits />
             </>
         )
     }
