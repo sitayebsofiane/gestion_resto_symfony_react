@@ -13,7 +13,7 @@ class Produits extends Component{
      }
   
     addTenYears=()=>{
-      const updatedState = this.state.produits.map((param)=> param.prix*=1.02);
+      const updatedState = this.state.produits.map((param)=> {if(param.prix<5) return param.prix*=1.02});
        this.setState({
         updatedState
        })
