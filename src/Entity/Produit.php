@@ -3,10 +3,11 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
- * @ORM\Entity(repositoryClass="App\Repository\ProduitRepository")
- */
+* @ORM\Entity(repositoryClass="App\Repository\ProduitRepository")
+*/
 class Produit
 {
     /**
@@ -18,6 +19,11 @@ class Produit
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\Regex(
+     *     pattern="/\d/",
+     *     match=false,
+     *     message="name cannot contain a number"
+     * )
      */
     private $nom;
 
