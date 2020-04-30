@@ -29,6 +29,10 @@ class Produit
 
     /**
      * @ORM\Column(type="integer")
+     * @Assert\Regex(
+     *     pattern="/\d/",
+     *     message="name cannot contain a number"
+     * )
      */
     private $duree_de_conservation;
 
