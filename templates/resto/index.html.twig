@@ -1,7 +1,21 @@
 {% extends 'base.html.twig' %}
 
 {% block title %}Page accueil{% endblock %}
+{% block stylesheets %}
+	{# 'app' must match the first argument to addEntry() in webpack.config.js #}
+			{{ encore_entry_link_tags('accueil') }}
+
+			<!-- Renders a link tag (if your module requires any CSS)						                 <link rel="stylesheet" href="/build/app.css"> -->
+{% endblock %}
 
 {% block body %}
-	<div id="accueil"></div>
+	<div id="accueil" class="container"></div>
+	{% block javascripts %}
+			{{ encore_entry_script_tags('accueil') }}
+
+			<!-- Renders app.js & a webpack runtime.js file
+						                <script src="/build/runtime.js"></script>
+						                <script src="/build/app.js"></script> -->
+	{% endblock %}
+	<a href="{{ path('produit') }}">produit</a>
 {% endblock %}

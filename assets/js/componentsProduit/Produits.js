@@ -7,7 +7,7 @@ class Produits extends Component{
         produits:[
         {name:'chese burger',description:'red',prix:2},
         {name:'mergueze',description:'black',prix:2},
-        {name:'kebab',description:'green',prix:2.1}
+        {name:'kebab turc',description:'green',prix:2.1}
         ],
         titre:'catalogue'
      }
